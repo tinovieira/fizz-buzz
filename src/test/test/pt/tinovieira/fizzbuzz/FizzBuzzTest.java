@@ -29,4 +29,9 @@ public class FizzBuzzTest {
         Assert.assertEquals("fizzbuzz", FizzBuzz.convert(30));
     }
 
+    @Test
+    public void testZero() {
+        Assert.assertEquals("fizzbuzz", FizzBuzz.convert(0));
+    }
+
 }
