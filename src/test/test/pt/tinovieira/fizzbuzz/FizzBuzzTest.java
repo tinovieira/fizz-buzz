@@ -21,4 +21,20 @@ public class FizzBuzzTest {
         Assert.assertEquals("fizz", fizzBuzz.convert(6));
     }
 
+    @Test
+    public void testMultiplesOfFive() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        Assert.assertEquals("buzz", fizzBuzz.convert(5));
+        Assert.assertEquals("buzz", fizzBuzz.convert(10));
+    }
+
+    @Test
+    public void testMultipleOfFifteen() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        Assert.assertEquals("fizzbuzz", fizzBuzz.convert(15));
+        Assert.assertEquals("fizzbuzz", fizzBuzz.convert(30));
+    }
+
 }
