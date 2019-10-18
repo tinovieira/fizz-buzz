@@ -1,8 +1,13 @@
 package pt.tinovieira.fizzbuzz;
 
-class FizzBuzz {
+public class FizzBuzz {
 
-    String convert(int toConvertToFizzBuzz) {
+    public String convert(int toConvertToFizzBuzz) {
+
+        if (toConvertToFizzBuzz % 3 == 0) {
+            return "fizz";
+        }
+
         return String.valueOf(toConvertToFizzBuzz);
     }
 }

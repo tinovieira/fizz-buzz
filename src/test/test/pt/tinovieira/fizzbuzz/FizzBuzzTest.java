@@ -10,8 +10,15 @@ public class FizzBuzzTest {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         Assert.assertEquals("1", fizzBuzz.convert(1));
-        Assert.assertEquals("2", fizzBuzz.convert(2));
         Assert.assertEquals("4", fizzBuzz.convert(4));
+    }
+
+    @Test
+    public void testMultiplesOfThree() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        Assert.assertEquals("fizz", fizzBuzz.convert(3));
+        Assert.assertEquals("fizz", fizzBuzz.convert(6));
     }
 
 }
