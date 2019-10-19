@@ -7,31 +7,36 @@ public class FizzBuzzTest {
 
     @Test
     public void testTheNumber() {
-        Assert.assertEquals("1", FizzBuzz.convert(1));
-        Assert.assertEquals("4", FizzBuzz.convert(4));
+        FizzBuzzConverter fizzBuzz = new FizzBuzzConverter();
+        Assert.assertEquals("1", fizzBuzz.convert(1));
+        Assert.assertEquals("4", fizzBuzz.convert(4));
     }
 
     @Test
     public void testMultiplesOfThree() {
-        Assert.assertEquals("fizz", FizzBuzz.convert(3));
-        Assert.assertEquals("fizz", FizzBuzz.convert(6));
+        FizzBuzzConverter fizzBuzz = new FizzBuzzConverter();
+        Assert.assertEquals("fizz", fizzBuzz.convert(3));
+        Assert.assertEquals("fizz", fizzBuzz.convert(6));
     }
 
     @Test
     public void testMultiplesOfFive() {
-        Assert.assertEquals("buzz", FizzBuzz.convert(5));
-        Assert.assertEquals("buzz", FizzBuzz.convert(10));
+        FizzBuzzConverter fizzBuzz = new FizzBuzzConverter();
+        Assert.assertEquals("buzz", fizzBuzz.convert(5));
+        Assert.assertEquals("buzz", fizzBuzz.convert(10));
     }
 
     @Test
     public void testMultipleOfFifteen() {
-        Assert.assertEquals("fizzbuzz", FizzBuzz.convert(15));
-        Assert.assertEquals("fizzbuzz", FizzBuzz.convert(30));
+        FizzBuzzConverter fizzBuzz = new FizzBuzzConverter();
+        Assert.assertEquals("fizzbuzz", fizzBuzz.convert(15));
+        Assert.assertEquals("fizzbuzz", fizzBuzz.convert(30));
     }
 
     @Test
     public void testZero() {
-        Assert.assertEquals("fizzbuzz", FizzBuzz.convert(0));
+        FizzBuzzConverter fizzBuzz = new FizzBuzzConverter();
+        Assert.assertEquals("fizzbuzz", fizzBuzz.convert(0));
     }
 
 }

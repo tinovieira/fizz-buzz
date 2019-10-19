@@ -10,34 +10,18 @@ public class FizzBuzz {
             final Integer secondNumber = parseString(args[1], "Second");
 
             if (firstNumber != null && secondNumber != null) {
+                final FizzBuzzConverter fizzBuzz = new FizzBuzzConverter();
                 if (firstNumber <= secondNumber) {
                     for (int i = firstNumber; i <= secondNumber; i++) {
-                        System.out.print(convert(i) + " ");
+                        System.out.print(fizzBuzz.convert(i) + " ");
                     }
                 } else {
                     for (int i = firstNumber; i >= secondNumber; i--) {
-                        System.out.print(convert(i) + " ");
+                        System.out.print(fizzBuzz.convert(i) + " ");
                     }
                 }
             }
         }
-    }
-
-    static String convert(int toConvertToFizzBuzz) {
-
-        if (toConvertToFizzBuzz % 15 == 0) {
-            return "fizzbuzz";
-        }
-
-        if (toConvertToFizzBuzz % 5 == 0) {
-            return "buzz";
-        }
-
-        if (toConvertToFizzBuzz % 3 == 0) {
-            return "fizz";
-        }
-
-        return String.valueOf(toConvertToFizzBuzz);
     }
 
     private static Integer parseString(String value, String position) {
