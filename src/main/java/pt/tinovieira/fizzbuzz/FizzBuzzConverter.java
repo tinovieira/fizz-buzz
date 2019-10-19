@@ -2,9 +2,6 @@ package pt.tinovieira.fizzbuzz;
 
 public class FizzBuzzConverter {
 
-    public FizzBuzzConverter() {
-    }
-
     public String convert(int toConvert) {
         final String conversion;
 
