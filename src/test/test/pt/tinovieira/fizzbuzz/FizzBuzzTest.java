@@ -39,4 +39,11 @@ public class FizzBuzzTest {
         Assert.assertEquals("fizzbuzz", fizzBuzz.convert(0));
     }
 
+    @Test
+    public void testNumberWithThree() {
+        FizzBuzzConverter fizzBuzz = new FizzBuzzConverter();
+        Assert.assertEquals("lucky", fizzBuzz.convert(13));
+        Assert.assertEquals("lucky", fizzBuzz.convert(134));
+    }
+
 }
