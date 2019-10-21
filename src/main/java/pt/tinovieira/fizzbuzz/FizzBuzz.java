@@ -3,14 +3,16 @@ package pt.tinovieira.fizzbuzz;
 public class FizzBuzz {
 
     public static void main(String[] args) {
-        if (args.length != 2) {
-            System.out.println("Wrong number of parameters, should be two (Usage: fizzbuzz 2 16)");
-        } else {
-            final Integer firstNumber = parseString(args[0], "First");
-            final Integer secondNumber = parseString(args[1], "Second");
 
-            if (firstNumber != null && secondNumber != null) {
+        if (argumentsAreValid(args)) {
+
+            final Integer firstNumber = parseArgumentString(args[0], "First");
+            final Integer secondNumber = parseArgumentString(args[1], "Second");
+
+            if (parametersAreValid(firstNumber, secondNumber)) {
+
                 final FizzBuzzConverter fizzBuzz = new FizzBuzzConverter();
+
                 if (firstNumber <= secondNumber) {
                     for (int i = firstNumber; i <= secondNumber; i++) {
                         System.out.print(fizzBuzz.convert(i) + " ");
@@ -22,9 +24,22 @@ public class FizzBuzz {
                 }
             }
         }
+
     }
 
-    private static Integer parseString(String value, String position) {
+    private static boolean argumentsAreValid(String[] args) {
+        if (args.length != 2) {
+            System.out.println("Wrong number of parameters, should be two (Usage: fizzbuzz 2 16)");
+            return false;
+        }
+        return true;
+    }
+
+    private static boolean parametersAreValid(Integer firstParameter, Integer secondParameter) {
+        return firstParameter != null && secondParameter != null;
+    }
+
+    private static Integer parseArgumentString(String value, String position) {
         try {
             return Integer.parseInt(value);
         } catch (NumberFormatException e) {
@@ -32,4 +47,5 @@ public class FizzBuzz {
         }
         return null;
     }
+
 }
