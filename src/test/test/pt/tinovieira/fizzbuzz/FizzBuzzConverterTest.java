@@ -3,7 +3,7 @@ package pt.tinovieira.fizzbuzz;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class FizzBuzzTest {
+public class FizzBuzzConverterTest {
 
     @Test
     public void testTheNumber() {

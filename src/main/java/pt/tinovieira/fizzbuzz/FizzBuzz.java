@@ -1,5 +1,8 @@
 package pt.tinovieira.fizzbuzz;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FizzBuzz {
 
     public static void main(String[] args) {
@@ -11,17 +14,27 @@ public class FizzBuzz {
 
             if (parametersAreValid(firstNumber, secondNumber)) {
 
+                final List<String> list = new ArrayList<>();
+
                 final FizzBuzzConverter fizzBuzz = new FizzBuzzConverter();
 
                 if (firstNumber <= secondNumber) {
                     for (int i = firstNumber; i <= secondNumber; i++) {
-                        System.out.print(fizzBuzz.convert(i) + " ");
+                        list.add(fizzBuzz.convert(i));
                     }
                 } else {
                     for (int i = firstNumber; i >= secondNumber; i--) {
-                        System.out.print(fizzBuzz.convert(i) + " ");
+                        list.add(fizzBuzz.convert(i));
                     }
                 }
+
+                list.forEach(string -> System.out.print(string + " "));
+
+                System.out.println();
+
+                new FizzBuzzCounter().count(list)
+                        .forEach((string, count) -> System.out.println(string + ": " + count));
+
             }
         }
 
